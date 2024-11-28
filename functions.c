@@ -28,12 +28,12 @@ int printea_string(va_list args)
 
 	if (string == NULL)
 	{
-		return (-1);
+		return (write(1, "(null)", 6));
 	}
-		for (i = 0; string[i] != '\0'; i++)
-		{
-			count += write(1, &string[i], 1);
-		}
+	for (i = 0; string[i] != '\0'; i++)
+	{
+		count += write(1, &string[i], 1);
+	}
 	return (count);
 }
 
