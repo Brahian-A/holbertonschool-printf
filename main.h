@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdio.h>
-
+#include <limits.h>
 /**
  * struct spec- Estructura para asociar un especificador con una funció
  *@especificador: Caracter que representa el especificador
