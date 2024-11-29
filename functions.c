@@ -28,7 +28,7 @@ int printea_string(va_list args)
 
 	if (string == NULL)
 	{
-		return (-1);
+		string = "(null)";
 	}
 		for (i = 0; string[i] != '\0'; i++)
 		{
@@ -68,9 +68,9 @@ int printea_enteros(va_list args)
 	}
 
 	if (num == INT_MIN)
-        {
-                write(1, "-2147483648", 11);
-                return (11);
+	{
+		write(1, "-2147483648", 11);
+		return (11);
 	}
 	if (num < 0)
 	{
@@ -78,7 +78,7 @@ int printea_enteros(va_list args)
 		num = -num;
 		conteo++;
 	}
-		
+
 	while (num > 0)
 	{
 		string[i] = (num % 10) + '0';
