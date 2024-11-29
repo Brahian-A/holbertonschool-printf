@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 					conteo += write(1, &format[i - 1], 1);
 					conteo += write(1, &format[i], 1);
 				}
+			i_2 = 0;
 			}
 			else
 				conteo += write(1, &format[i], 1);

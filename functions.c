@@ -28,12 +28,12 @@ int printea_string(va_list args)
 
 	if (string == NULL)
 	{
-		return (write(1, "(null)", 6));
+		return (-1);
 	}
-	for (i = 0; string[i] != '\0'; i++)
-	{
-		count += write(1, &string[i], 1);
-	}
+		for (i = 0; string[i] != '\0'; i++)
+		{
+			count += write(1, &string[i], 1);
+		}
 	return (count);
 }
 
@@ -59,11 +59,18 @@ int printea_enteros(va_list args)
 {
 	int num = va_arg(args, int);
 	int conteo = 0, i = 0, i_2 = 0;
-	char string[11];
+	char string[12];
 
 	if (num == 0)
 	{
 		write(1, "0", 1);
+		return (1);
+	}
+
+	if (num == INT_MIN)
+        {
+                write(1, "-2147483648", 11);
+                return (11);
 	}
 	if (num < 0)
 	{
@@ -71,16 +78,17 @@ int printea_enteros(va_list args)
 		num = -num;
 		conteo++;
 	}
-		while (num > 0)
-		{
-			string[i] = (num % 10) + '0';
-			num /= 10;
-			i++;
-		}
-			for (i_2 = i - 1; i_2 >= 0; i_2--)
-			{
-				write(1, &string[i_2], 1);
-				conteo++;
-			}
-		return (conteo);
+		
+	while (num > 0)
+	{
+		string[i] = (num % 10) + '0';
+		num /= 10;
+		i++;
+	}
+	for (i_2 = i - 1; i_2 >= 0; i_2--)
+	{
+		write(1, &string[i_2], 1);
+		conteo++;
+	}
+	return (conteo);
 }
