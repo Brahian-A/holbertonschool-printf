@@ -7,23 +7,24 @@
 #include <stdio.h>
 #include <limits.h>
 /**
- * struct spec- Estructura para asociar un especificador con una funció
- *@especificador: Caracter que representa el especificador
- *@funcion: Función asociada al especificador, que maneja su formato y salid
+ * struct spec- Structure for associating a specifier with a function
+ *@specifier: Character that represents the specifier
+ *@funcion: Function associated with the specifier, which handles its format and output.
  */
 
 typedef struct spec
 {
-	char especificador;
+	char specifier;
 	int (*funcion)(va_list args);
 } spec_t;
 
 spec_t *get_specs(void);
 int _printf(const char *format, ...);
 
-int printea_char(va_list args);
-int printea_string(va_list args);
-int printea_porcentaje(va_list args);
-int printea_enteros(va_list args);
-int printea_enteros_sin_signos(va_list args);
+int printing_char(va_list args);
+int printing_string(va_list args);
+int printing_percent(va_list args);
+int printing_int(va_list args);
+int printing_unsigned(va_list args);
 #endif
+
