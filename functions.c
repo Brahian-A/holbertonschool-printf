@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- *printea_char- funcion que printea un caracter
+ *printing_char- funcion que printing un caracter
  *@args: Lista de argumentos
  *Return: Número de caracteres impress
  */
 
 
-int printea_char(va_list args)
+int printing_char(va_list args)
 {
 	char c;
 
@@ -16,12 +16,12 @@ int printea_char(va_list args)
 }
 
 /**
- *printea_string- Imprime una cadena de texto
+ *printing_string- Imprime una cadena de texto
  *@args: Lista de argumentos
  *Return: Número de caracteres impress
  */
 
-int printea_string(va_list args)
+int printing_string(va_list args)
 {
 	char *string = va_arg(args, char *);
 	int i, count = 0;
@@ -38,27 +38,27 @@ int printea_string(va_list args)
 }
 
 /**
- *printea_porcentaje- Imprime el carácter'%'
+ *printing_percent- Imprime el carácter'%'
  *@args: Lista de argumentos (no usado)
  *Return: Número de caracteres impres "siempre 1 en este caso"
  */
 
-int printea_porcentaje(va_list args)
+int printing_percent(va_list args)
 {
 	(void)args;
 	return (write(1, "%", 1));
 }
 
 /**
- *printea_enteros- Convierte un número entero en texto y lo imprime
+ *printing_int- Convierte un número entero en texto y lo imprime
  *@args: lista de argumentos
  *Return: Número total de caracteres impresos, incluyendo el signo
  */
 
-int printea_enteros(va_list args)
+int printing_int(va_list args)
 {
 	int num = va_arg(args, int);
-	int conteo = 0, i = 0, i_2 = 0;
+	int count = 0, i = 0, i_2 = 0;
 	char string[12];
 
 	if (num == 0)
@@ -76,7 +76,7 @@ int printea_enteros(va_list args)
 	{
 		write(1, "-", 1);
 		num = -num;
-		conteo++;
+		count++;
 	}
 
 	while (num > 0)
@@ -88,7 +88,7 @@ int printea_enteros(va_list args)
 	for (i_2 = i - 1; i_2 >= 0; i_2--)
 	{
 		write(1, &string[i_2], 1);
-		conteo++;
+		count++;
 	}
-	return (conteo);
+	return (count);
 }
