@@ -1,13 +1,18 @@
-</div><H1>Customized printf</H1>
+<H1>Customized printf</H1>
 <h2>Project Description:</h2>The project consists of creating a function similar to printf.
 <hr>
 <h3>Structures Creation</h3>
 <ul>
 <li>printing_char</li>
+Handles printing a single character.
 <li>printing_string</li>
+Handles printing a string of characters.
 <li>printing_percent</li>
+Handles printing the percent sign (%).
 <li>printing_integers</li>
+Handles printing integer numbers, both positive and negative.
 <li>printing_unsigned</li>
+Handles printing unsigned integers (positive whole numbers).
 </ul>
 <hr>
 <h3><strong><li>printing_char</li></strong></h3>
