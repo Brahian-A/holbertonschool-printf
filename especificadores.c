@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- *get_specs- Array de especificadores y funciones asociadas
- *Return: la llamada a la funciion
+ *get_specs- Arrays of specificators and asociated functions
+ *Return: call to function
  */
 
 spec_t *get_specs(void)
 {
 	static spec_t specs[] = {
-		{'c', printea_char},
-		{'s', printea_string},
-		{'%', printea_porcentaje},
-		{'d', printea_enteros},
-		{'i', printea_enteros},
+		{'c', printing_char},
+		{'s', printing_string},
+		{'%', printing_percent},
+		{'d', printing_int},
+		{'i', printing_int},
 		{'\0', NULL}
 		};
 return (specs);
