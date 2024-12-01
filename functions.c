@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- *printing_char- funcion que printing un caracter
- *@args: Lista de argumentos
- *Return: Número de caracteres impress
+ *printing_char- function that prints a char
+ *@args: Args List
+ *Return: Number of printed chars
  */
 
 
@@ -16,9 +16,9 @@ int printing_char(va_list args)
 }
 
 /**
- *printing_string- Imprime una cadena de texto
- *@args: Lista de argumentos
- *Return: Número de caracteres impress
+ *printing_string- Prints a string
+ *@args: Args List
+ *Return: Number of prindet chars
  */
 
 int printing_string(va_list args)
@@ -38,9 +38,9 @@ int printing_string(va_list args)
 }
 
 /**
- *printing_percent- Imprime el carácter'%'
- *@args: Lista de argumentos (no usado)
- *Return: Número de caracteres impres "siempre 1 en este caso"
+ *printing_percent- Prints '%' char
+ *@args: Args list (not used)
+ *Return: Number of printed chars "always 1 for this example"
  */
 
 int printing_percent(va_list args)
@@ -50,9 +50,9 @@ int printing_percent(va_list args)
 }
 
 /**
- *printing_int- Convierte un número entero en texto y lo imprime
- *@args: lista de argumentos
- *Return: Número total de caracteres impresos, incluyendo el signo
+ *printing_int- Convert an Int into a string and prints it
+ *@args: Args List
+ *Return: Total of printed chars including sing
  */
 
 int printing_int(va_list args)
